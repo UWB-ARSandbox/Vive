@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/UWBNetworking-LW/UWBNetworkingPackage/Scenes/Launcher.unity
+  isLoaded: 1
+  isActive: 1
