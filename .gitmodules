@@ -1,4 +1,3 @@
 [submodule "Assets/UWBNetworking-LW"]
 	path = Assets/UWBNetworking-LW
 	url = https://github.com/UWB-ARSandbox/UWBNetworkingPackage-LW.git
-	ignore = dirty
