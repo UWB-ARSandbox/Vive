@@ -46,6 +46,7 @@ namespace UWBNetworkingPackage.ViveDemo
         public override void OnJoinedRoom()
         {
             _leftHand = PhotonNetwork.Instantiate(ViveLeftHandObject.name, Vector3.zero, Quaternion.identity, 0);
+            _leftHand.GetComponent<Renderer>().enabled = false;
             _instantiated = true;
         }
 
@@ -57,9 +58,7 @@ namespace UWBNetworkingPackage.ViveDemo
         {
             if (!_instantiated || _cameraRig == null) return;
             _leftHand.transform.position = _cameraRigLeftHand.transform.position;
-            Quaternion rot = _cameraRigLeftHand.transform.rotation;
-            rot.eulerAngles = rot.eulerAngles + new Vector3(0, 180, 0);
-            _leftHand.transform.rotation = rot;
+            _leftHand.transform.rotation = _cameraRigLeftHand.transform.rotation;
         }
     }
 }

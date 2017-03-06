@@ -43,6 +43,7 @@ namespace UWBNetworkingPackage.ViveDemo
         public override void OnJoinedRoom()
         {
             _head = PhotonNetwork.Instantiate(ViveHeadObject.name, Vector3.zero, Quaternion.identity, 0);
+            _head.GetComponent<Renderer>().enabled = false;
             _instantiated = true;
         }
 
@@ -54,9 +55,7 @@ namespace UWBNetworkingPackage.ViveDemo
         {
             if (!_instantiated || _cameraRig == null) return;
             _head.transform.position = _cameraRigHead.transform.position;
-            Quaternion rot = _cameraRigHead.transform.rotation;
-            rot.eulerAngles = rot.eulerAngles + new Vector3(0, 180, 0);
-            _head.transform.rotation = rot;
+            _head.transform.rotation = _cameraRigHead.transform.rotation;
         }
     }
 }
