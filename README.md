@@ -1,5 +1,5 @@
 
-# Vive-2.0
+# Vive
 ## Installation / Setup
 1. Clone project  
    Install at the directory of choice with the following cmd command:  
