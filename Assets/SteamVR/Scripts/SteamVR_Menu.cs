@@ -241,8 +241,8 @@ public class SteamVR_Menu : MonoBehaviour
 
 		SaveCursorState();
 
-	    UnityEngine.Cursor.visible = true;
-		UnityEngine.Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
 
 		this.overlay = overlay;
 		uvOffset = overlay.uvOffset;
@@ -319,14 +319,14 @@ public class SteamVR_Menu : MonoBehaviour
 
 	void SaveCursorState()
 	{
-		savedCursorVisible = UnityEngine.Cursor.visible;
-		savedCursorLockState = UnityEngine.Cursor.lockState;
+		savedCursorVisible = Cursor.visible;
+		savedCursorLockState = Cursor.lockState;
 	}
 
 	void RestoreCursorState()
 	{
-		UnityEngine.Cursor.visible = savedCursorVisible;
-		UnityEngine.Cursor.lockState = savedCursorLockState;
+		Cursor.visible = savedCursorVisible;
+		Cursor.lockState = savedCursorLockState;
 	}
 }
 
